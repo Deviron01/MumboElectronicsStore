@@ -1,0 +1,66 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mumbo Electronics Shop · M-Pesa</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="header">
+    <div class="logo">
+        <h1>Mumbo <span>Electronics</span> Shop</h1>
+    </div>
+    <div class="header-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+            <span class="toggle-icon" id="toggleIcon">🌙</span>
+        </button>
+        <div class="cart-icon" id="cartIcon">
+            <i>🛒</i>
+            <span>Cart</span>
+            <span class="cart-count" id="cartCount">0</span>
+        </div>
+    </div>
+</header>
+
+<main>
+    <h2 class="page-title">Featured products (KSH)</h2>
+    <div class="product-grid" id="productGrid"></div>
+
+    <div class="cart-panel" id="cartPanel">
+        <h2><i>🛍️</i> Your cart</h2>
+        <ul class="cart-items" id="cartItemsList"></ul>
+        <div class="cart-summary">
+            <span>Total</span>
+            <span class="cart-total" id="cartTotal">KSH 0.00</span>
+        </div>
+
+        <div class="mpesa-checkout-box">
+            <h3><i>📱</i> Pay with M-Pesa (Lipa na M-Pesa)</h3>
+            <div class="mpesa-phone-input">
+                <input type="tel" id="mpesaPhone" placeholder="e.g. 254712345678 or 0712345678" value="254712345678" />
+            </div>
+            <button class="checkout-btn" id="checkoutBtn" disabled>
+                <i>💳</i> Pay with M-Pesa
+            </button>
+            <p class="mpesa-note">
+                <i>ⓘ</i> This is a simulated STK Push. A real integration requires a secure backend server with Safaricom Daraja API credentials.
+            </p>
+        </div>
+    </div>
+</main>
+
+<footer class="footer">
+    © 2025 Mumbo Electronics Shop. All prices in Kenyan Shillings (KSH).
+</footer>
+
+<div class="toast-message" id="toast"></div>
+
+<script src="index.js"></script>
+</body>
+</html>
